@@ -1,0 +1,1 @@
+var app = angular.module("cardApp", ['ui.bootstrap', 'ngMap', 'timer', 'AnimatedScroll']); 
