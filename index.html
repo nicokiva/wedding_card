@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body ng-app="cardApp" ng-controller="cardCtrl">
+		<nav id="menu" class="row">
+			<div><a href="#" ng-click="scrollTo('we')">Nosotros</a></div>
+			<div><a href="#" ng-click="scrollTo('civil')">Civil y Templo</a></div>
+			<div><a href="#" ng-click="scrollTo('party')">Fiesta</a></div>
+			<div><a href="#" ng-click="scrollTo('gift')">Regalo</a></div>
+		</nav>
+
+		<div class="header row">
+			<img src="resources/img/header.png" />
+		</div>
+
+		<div class="separator row">
+			<img src="resources/img/black_flower.png" />
+			<span>Amar no es mirarse el uno al otro,<br /> es mirar juntos en la misma dirección</span>
+			<img src="resources/img/black_flower.png" />
+		</div>
+
+		<div class="section bios row">
+			<div class="bio col-sm-12 col-md-6">
+				<div class="content">
+					<div class="border"></div>
+					<img src="http://www.rionegro.com.ar/documents/1/0/660x371/0c1/660d370/none/12350/ALJA/image_content_7331387_20160701233354.jpg" />
+				
+					<span class="title">
+						Sonia Babenco
+					</span>
+
+					<span class="description">
+						La mujer más especial del planeta. ♥
+					</span>
+				</div>
+			</div>
+
+			<div class="bio col-sm-12 col-md-6">
+				<div class="content">
+					<div class="border"></div>
+					<img src="http://www.rionegro.com.ar/documents/1/0/660x371/0c1/660d370/none/12350/ALJA/image_content_7331387_20160701233354.jpg" />
+
+					<span class="title">
+						Nicolás Kivatinetz
+					</span>
+
+					<span class="description">
+						El hombre más sexy del mundo.
+					</span>
+				</div>
+			</div>
+
+			<div class="flag" id="we"></div>
+		</div>
+
+		<div class="row slider">
+			<div>
+				<carousel interval="interval">
+					<slide ng-repeat="url in urls" active="activeSlide">
+						<img ng-src="{{url}}">
+					</slide>
+		      	</carousel>
+	        </div>
+		</div>
+
+		<div class="separator row gold">
+			<img src="resources/img/gold_flower.png" />
+			<span>Yo elijo hacer del resto de mi vida<br />lo mejor de mi vida</span>
+			<img src="resources/img/gold_flower.png" />
+		</div>
+
+		<div class="section row wedding-info">
+			<div class="event">
+				<img src="resources/img/flowers.jpg" />
+				<div class="content">
+					<span class="title">Civil</span>
+					<span class="description">Beruti 3325, C1425 CABA<br />23/03/2017 - 12:30 hs</span>
+
+					<span class="button" ng-click="changeLocation('civil')">Ver Mapa</span>
+				</div>
+
+				<div class="flag" id="civil"></div>
+			</div>
+
+			<div class="event">
+				<img src="resources/img/hands.jpg" class="right" />
+				<div class="content">
+					<span class="title">Templo</span>
+					<span class="description">Acevedo 276 C1414 CABA<br />26/03/2017 - 12:30 hs</span>
+
+					<span class="button" ng-click="changeLocation('temple')">Ver Mapa</span>
+				</div>
+			</div>
+
+			<ng-map id="map" center="{{selectedLocation.coordinates}}" zoom="16"
+			    pan-control="false"
+			    zoom-control="false"
+			    scale-control="true">
+
+			    <marker position="{{selectedLocation.coordinates}}" title="{{selectedLocation.title}}"></marker>
+		  	</ng-map>
+
+			<div class="event">
+				<div class="flag" id="party"></div>
+				<img src="resources/img/party.jpg" class="right" />
+				<div class="content">
+					<span class="title">Fiesta</span>
+					<span class="description">Av. Costanera Rafael Obligado 6551 CABA<br />26/03/2017 - 14:00 hs</span>
+
+					<span class="button" ng-click="changeLocation('party')">Ver Mapa</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="gift" class="section bank row">
+			<span class="help-info">Ayudanos a hacer nuestro sueño de luna de miel realidad</span>
+
+			<span class="description">Banco de la nación Argentina N°112730240900531/28 (1)</span>
+		</div>
+
+		<div class="section countdown row">
+			<timer end-time="1490540400000" interval="1000">
+				<div class="countdown-container">
+					<div>
+						<span class="time">{{days}}</span> Días
+					</div>
+					<div>
+						<span class="time">{{hours}}</span> Horas
+					</div>
+					<div>
+						<span class="time">{{minutes}}</span> Minutos
+					</div>
+				</div>
+			</timer>
+		</div>
+			
+
+	<!-- Files load -->
+		<script type="text/javascript" src="scripts/vendors/moment.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="scripts/vendors/angular-timer-all.min.js"></script>
+
+		<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBrpruEhjs0xhxQy2TvaAR_Q3SVv26gfv0"></script>
+		<script type="text/javascript" src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
+		<script type="text/javascript" src="node_modules/ng-animated-scroll/dist/ngAnimatedScroll.service.min.js"></script>
+
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/cardCtrl.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/styles.css">
+	<!-- /Files load -->
+
+	</body>
+</html>

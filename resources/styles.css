@@ -1,0 +1,325 @@
+@font-face {
+	font-family: 'scriptbl';
+	src: url('fonts/scriptbl.ttf');
+}
+
+@font-face {
+	font-family: 'bodoni';
+	src: url('fonts/bodoni/BOD_B.TTF');
+}
+
+@font-face {
+	font-family: 'alexbrush-regular';
+	src: url('fonts/alexbrush-regular.ttf');
+}
+
+@font-face {
+	font-family: 'freescpt';
+	src: url('fonts/freescpt.ttf');
+}
+
+body {
+	font-family: 'bodoni', Georgia, Serif;
+}
+
+nav {
+	height: 45px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+nav div {
+	display: inline;
+	padding-left: 30px;
+	text-transform: uppercase;
+}
+
+nav div a {
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.right { 
+	float: right !important;
+}
+
+.section {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.header img {
+	width: 100%;
+}
+
+.separator {
+	font-family: 'scriptbl', Georgia, Serif;
+	font-size: 30px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.separator.gold span {
+	color: rgb(251,176,59);
+}
+
+.separator img {
+	display: block;
+	margin: auto;
+}
+
+.separator img:last-child {
+	transform: rotate(180deg);
+}
+
+.bios {
+	text-align: center;
+}
+
+.bio {
+	margin-bottom: 40px;
+}
+
+.bio .content {
+	margin: auto;
+	width: 300px;
+}
+
+
+
+.bio img {
+    border-image: url(img/photos_container.png);
+    border-radius: 50%;
+    height: 275px;
+    margin-bottom: 30px;
+    margin-top: 13px;
+    width: 275px;
+}
+
+.bio .border {
+	background-image: url(img/photos_container.png);
+	background-size: 300px;
+	height: 300px;
+	position: absolute;
+	width: 300px;
+	z-index: 100;
+}
+
+span.title {
+	display: block;
+	font-family: 'alexbrush-regular', arial;
+	font-size: 42px;
+	margin: 20px auto;
+}
+
+.bio span.description, .event span.description {
+	font-family: 'bodoni', arial;
+	font-size: 20px;
+}
+
+.slider img {
+	max-height: 400px;
+	width: 100%;
+}
+
+
+.event, .event img, .wedding-info .content {
+	height: 350px;
+}
+
+.event .title {
+	margin-bottom: 0;
+	margin-top: 40px;
+}
+
+.wedding-info img {
+	float: left;
+	width: 50%;
+}
+
+.wedding-info .content  {
+	background-position: 90% 90%;
+	background-repeat: no-repeat;
+	background-size: 70px;
+	float: right;
+	padding-top: 15px;
+	text-align: center;
+	width: 50%;
+}
+
+.wedding-info div:first-child .content { 
+	background-image: url('img/feather.png');
+	background-size: 130px;
+}
+
+.wedding-info > div:nth-child(2) > .content { 
+	background-image: url('img/rings.png');
+	background-size: 100px;
+}
+
+.wedding-info > div:last-child > .content {
+	background-color: rgb(251,176,59); 
+	background-image: url('img/cups.png');
+	background-size: 100px;
+	color: rgb(255, 255, 255);
+}
+
+.button {
+	border: solid 2px;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+    margin-left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+	width: 110px;
+}
+
+.bank {
+	background-image: url('img/heart_plane.png');
+	background-position: 50% 10%;
+	background-repeat: no-repeat;
+    background-size: 130px;
+    font-family: 'bodoni', arial !important;
+	padding-top: 150px;
+	text-align: center;
+}
+
+.bank > span {
+	display: block;
+}
+
+.bank > .help-info {
+	font-size: 30px;
+}
+
+.countdown {
+	background-image: url('img/countdown.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+    height: 550px;
+    margin-bottom: 0;
+}
+
+.countdown .countdown-container {
+	float: right;
+	margin-top: 440px;
+}
+
+.countdown .countdown-container > div {
+	background-color: rgba(218,210,200,0.5);
+	border: solid 1px;
+	border-radius: 50%;
+    display: inline-block;
+	font-family: 'bodoni', arial;
+	height: 80px;
+	margin: 0 10px;
+	text-align: center;
+	width: 80px;
+}
+
+.countdown .time {
+	display: block;
+	font-family: 'freescpt', arial;
+	font-size: 35px;
+}
+
+
+
+@media (min-width: 992px) {
+	.bio .content { 
+		float:left;
+	}
+
+	.bio:first-child .content { 
+		float: right;
+	}
+
+	.bank .description {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 991px) {
+	nav div a {
+		font-size: 25px;
+	}
+
+	.bio .content {
+		margin: auto;
+		width: 450px;
+	}
+
+	.bio .border {
+		background-size: 450px;
+  		height: 450px;
+    	width: 450px;
+  	}
+
+  	.bio img {
+	    height: 425px;
+	    width: 425px;
+	}
+	
+	span.title {
+		font-size: 60px;
+	}
+
+	span.description {
+		font-size: 35px !important;
+	}
+
+	.event {
+		height: 1100px;
+	}
+
+	.event img {
+		height: 730px;
+	}
+
+	.event .content {
+		height: 370px;
+	}
+
+	.event img, .event .content {
+		width: 100%;
+	}
+
+	.bank {
+		background-size: 300px;
+		font-size: 33px;
+		height: 400px;
+		padding-top: 300px;
+	}
+
+	.bank > .help-info {
+		font-size: 40px;
+	}
+
+	.button {
+		font-size: 35px;
+	    width: 280px;
+	}
+
+	.countdown .countdown-container {
+		float: right;
+		margin-top: 400px;
+	}
+
+	.countdown .countdown-container > div {
+		font-size: 27px;
+		height: 120px;
+		width: 120px;		
+	}
+
+	.countdown .time {
+		font-size: 45px;
+	}
+
+	.separator {
+		font-size: 40px;
+	}
+
+
+}
