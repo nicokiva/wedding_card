@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+
+		<link rel="shortcut icon" href="resources/img/favicon.ico" type="image/png" />
 	</head>
 
 	<body ng-app="cardApp" ng-controller="cardCtrl">
@@ -76,10 +78,11 @@
 			<div class="event">
 				<img src="resources/img/flowers.jpg" />
 				<div class="content">
-					<span class="title">Civil</span>
-					<span class="description">Beruti 3325, C1425 CABA<br />23/03/2017 - 12:30 hs</span>
-
-					<span class="button" ng-click="changeLocation('civil')">Ver Mapa</span>
+					<div class="data">
+						<span class="title">Civil</span>
+						<span class="description">Av. Patricias Argentinas 277, CABA<br />23/03/2017 - 12:30 hs</span>
+						<span class="button" ng-click="changeLocation('civil')">Ver Mapa</span>
+					</div>
 				</div>
 
 				<div class="flag" id="civil"></div>
@@ -88,10 +91,12 @@
 			<div class="event">
 				<img src="resources/img/hands.jpg" class="right" />
 				<div class="content">
-					<span class="title">Templo</span>
-					<span class="description">Acevedo 276 C1414 CABA<br />26/03/2017 - 12:30 hs</span>
+					<div class="data">
+						<span class="title">Templo</span>
+						<span class="description">Acevedo 270, CABA<br />26/03/2017 - 12:30 hs</span>
 
-					<span class="button" ng-click="changeLocation('temple')">Ver Mapa</span>
+						<span class="button" ng-click="changeLocation('temple')">Ver Mapa</span>
+					</div>
 				</div>
 			</div>
 
@@ -107,10 +112,12 @@
 				<div class="flag" id="party"></div>
 				<img src="resources/img/party.jpg" class="right" />
 				<div class="content">
-					<span class="title">Fiesta</span>
-					<span class="description">Av. Costanera Rafael Obligado 6551 CABA<br />26/03/2017 - 14:00 hs</span>
+					<div class="data">
+						<span class="title">Fiesta</span>
+						<span class="description">Av. Costanera Rafael Obligado 6551, CABA<br />26/03/2017 - 14:00 hs</span>
 
-					<span class="button" ng-click="changeLocation('party')">Ver Mapa</span>
+						<span class="button" ng-click="changeLocation('party')">Ver Mapa</span>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -110,7 +110,8 @@ span.title {
 	display: block;
 	font-family: 'alexbrush-regular', arial;
 	font-size: 42px;
-	margin: 20px auto;
+	line-height: 1;
+    padding-bottom: 6px;
 }
 
 .bio span.description, .event span.description {
@@ -137,8 +138,8 @@ span.title {
 	background-position: 90% 90%;
 	background-repeat: no-repeat;
 	background-size: 70px;
+	display: table;
 	float: right;
-	padding-top: 15px;
 	text-align: center;
 	width: 50%;
 }
@@ -158,6 +159,11 @@ span.title {
 	background-image: url('../img/cups.png');
 	background-size: 100px;
 	color: rgb(255, 255, 255);
+}
+
+.wedding-info .content .data {
+	display: table-cell;
+    vertical-align: middle;
 }
 
 .button {
@@ -265,7 +271,7 @@ span.title {
 	}
 
 	span.description {
-		font-size: 35px !important;
+		font-size: 40px !important;
 	}
 
 	.event {
