@@ -1,5 +1,7 @@
 app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', function($scope, NgMap, animatedScroll, $timeout) {
 
+	$scope.mapHeight = '500px';
+
 /* Scrolling */
 	$scope.scrollTo = function(targetId) {
 		var elementIWantToScrollTo = document.getElementById(targetId);
@@ -26,7 +28,11 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
     	}
 
     	selectedLocation = selectedLocation[0];
-    	return { 
+    	return {
+    		notParsedCoordinates: {
+    			lat: selectedLocation.location.lat,
+    			lng: selectedLocation.location.lng
+    		},
     		coordinates: selectedLocation.location.lat + ', ' + selectedLocation.location.lng,
     		title: selectedLocation.title
     	};
@@ -37,6 +43,8 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
     	$scope.scrollTo('map');
     	
     	NgMap.getMap('map').then(map => {
+    		var coordinates = $scope.selectedLocation.notParsedCoordinates;
+    		map.setCenter(new google.maps.LatLng(coordinates.lat, coordinates.lng));
     		map.setZoom(16);
     	});
     }

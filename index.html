@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
+		<title>Nico ♥ So - 26/03/2017</title>
 		<link rel="shortcut icon" href="resources/img/favicon.ico" type="image/png" />
 	</head>
 
@@ -100,10 +101,7 @@
 				</div>
 			</div>
 
-			<ng-map id="map" center="{{selectedLocation.coordinates}}" zoom="16"
-			    pan-control="false"
-			    zoom-control="false"
-			    scale-control="true">
+			<ng-map id="map" center="{{selectedLocation.coordinates}}" zoom="16" pan-control="false" zoom-control="false" scale-control="true">
 
 			    <marker position="{{selectedLocation.coordinates}}" title="{{selectedLocation.title}}"></marker>
 		  	</ng-map>
