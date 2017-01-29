@@ -14,9 +14,9 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
 	$scope.interval = 3000;
 	$scope.noWrapSlides = false;
     $scope.urls = [
-    	'https://www.racingclub.com.ar/img/futbol/plantel/434_acuna.jpg', 
-    	'http://staticf5a.diaadia.info/sites/default/files/nota_periodistica/timthumb_6.jpg', 
-    	'http://www.expedientepolitico.com.ar/wp-content/uploads/saja.jpg'
+    	'../resources/img/slider1.jpg',
+    	'../resources/img/slider2.jpg', 
+    	'../resources/img/slider3.jpg'
     ];
 /* /Images */
 
