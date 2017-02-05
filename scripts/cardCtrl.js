@@ -14,9 +14,9 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
 	$scope.interval = 3000;
 	$scope.noWrapSlides = false;
     $scope.urls = [
-    	'../resources/img/slider1.jpg',
-    	'../resources/img/slider2.jpg', 
-    	'../resources/img/slider3.jpg'
+    	'resources/img/slider1.jpg',
+    	'resources/img/slider2.jpg', 
+    	'resources/img/slider3.jpg'
     ];
 /* /Images */
 
