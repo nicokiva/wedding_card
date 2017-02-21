@@ -217,16 +217,18 @@ span.title {
 	border-radius: 50%;
     display: inline-block;
 	font-family: 'bodoni', arial;
-	height: 80px;
 	margin: 0 10px;
 	text-align: center;
-	width: 80px;
+
+	font-size: 27px;
+	height: 120px;
+	width: 120px;
 }
 
 .countdown .time {
 	display: block;
 	font-family: 'freescpt', arial;
-	font-size: 35px;
+	font-size: 45px;
 }
 
 
@@ -312,16 +314,6 @@ span.title {
 
 	.countdown .countdown-container {
 		right: 0;
-	}
-
-	.countdown .countdown-container > div {
-		font-size: 27px;
-		height: 120px;
-		width: 120px;		
-	}
-
-	.countdown .time {
-		font-size: 45px;
 	}
 
 	.separator {
