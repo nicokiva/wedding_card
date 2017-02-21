@@ -16,7 +16,8 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
     $scope.urls = [
     	'resources/img/slider1.jpg',
     	'resources/img/slider2.jpg', 
-    	'resources/img/slider3.jpg'
+    	'resources/img/slider3.jpg',
+    	'resources/img/slider4.jpg'
     ];
 /* /Images */
 
