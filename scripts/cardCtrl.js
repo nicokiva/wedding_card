@@ -17,7 +17,9 @@ app.controller('cardCtrl', ['$scope', 'NgMap', 'animatedScroll', '$timeout', fun
     	'resources/img/slider1.jpg',
     	'resources/img/slider2.jpg', 
     	'resources/img/slider3.jpg',
-    	'resources/img/slider4.jpg'
+    	'resources/img/slider4.jpg',
+    	'resources/img/slider5.jpg',
+    	'resources/img/slider6.jpg'
     ];
 /* /Images */
 
